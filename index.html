@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Crypto Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <nav>
+        <a href="" class="active"><i class="fas fa-coins"></i></a>
+        <a href=""><i class="fas fa-chart-line"></i></a>
+        <a href=""><i class="fas fa-trophy"></i></a>
+        <a href="" style="font-size: 1.4rem"><i class="fab fa-bitcoin"></i></a>
+        <a href=""><i class="fas fa-users"></i></a>
+
+        <div class="navspacer"></div>
+        <a href=""><ion-icon name="settings"></ion-icon></a>
+        <a href=""><ion-icon style="font-size: 1.75rem;" name="person-circle-outline"></ion-icon></a>
+    </nav>
+    <div class="dashboard">
+
+        <div class="card profile" style="grid-area: 1/1/2/3">
+            <h2>Crypto Dashboard</h2>
+            <p>Stay updated with the latest in cryptocurrency</p>
+        </div>
+
+        <div class="card market-overview" style="grid-area: span 2 / span 2">
+            <h2>Market Overview</h2>
+            <table>
+                <tr>
+                    <th>Cryptocurrency</th>
+                    <th>Price</th>
+                    <th>Change (24h)</th>
+                </tr>
+                <tr>
+                    <td>Bitcoin (BTC)</td>
+                    <td>$35,000</td>
+                    <td>+2.5%</td>
+                </tr>
+                <tr>
+                    <td>Ethereum (ETH)</td>
+                    <td>$2,500</td>
+                    <td>+3.1%</td>
+                </tr>
+                <tr>
+                    <td>Binance Coin (BNB)</td>
+                    <td>$300</td>
+                    <td>-1.2%</td>
+                </tr>
+                <tr>
+                    <td>Cardano (ADA)</td>
+                    <td>$1.20</td>
+                    <td>+5.0%</td>
+                </tr>
+                <tr>
+                    <td>Ripple (XRP)</td>
+                    <td>$0.85</td>
+                    <td>-0.8%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card portfolio" style="grid-area: 2/1/3/3">
+            <h2>Market Analysis</h2>
+            <canvas id="portfolioChart"></canvas>
+        </div>
+
+        <div class="card transactions" style="grid-area: span 2 / span 2">
+            <h2>Recent Transactions</h2>
+            <div class="bigstats">
+                <div class="stat">
+                    <div class="statnum">Bought 0.5 BTC</div>
+                    <div class="stattext">$17,500</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Sold 10 ETH</div>
+                    <div class="stattext">$25,000</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Bought 100 ADA</div>
+                    <div class="stattext">$120</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Bought 50 XRP</div>
+                    <div class="stattext">$42.50</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Sold 1 BNB</div>
+                    <div class="stattext">$300</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Sold 0.3 BTC</div>
+                    <div class="stattext">$10,500</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Bought 0.8 BTC</div>
+                    <div class="stattext">$28,000</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Sold 0.1 BTC</div>
+                    <div class="stattext">$3,500</div>
+                </div>
+                <div class="stat">
+                    <div class="statnum">Bought 0.2 BTC</div>
+                    <div class="stattext">$7,000</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card news" style="grid-area: span 2 / span 2">
+            <h2>Latest News</h2>
+            <ul>
+                <li>Bitcoin hits new all-time high</li>
+                <li>Ethereum 2.0 is coming soon</li>
+                <li>Binance faces regulatory scrutiny</li>
+                <li>Cardano launches smart contracts</li>
+                <li>Ripple wins court case</li>
+            </ul>
+        </div>
+
+        <div class="card watchlist" style="grid-area: span 2 / span 2">
+            <h2>Watchlist</h2>
+            <ul>
+                <li>
+                    <span>Bitcoin</span>
+                    <div class="progresscircle" style="--progress: 75">
+                        <div>75%</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </li>
+                <li>
+                    <span>Ethereum</span>
+                    <div class="progresscircle" style="--progress: 50">
+                        <div>50%</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </li>
+                <li>
+                    <span>Cardano</span>
+                    <div class="progresscircle" style="--progress: 30">
+                        <div>30%</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card market-news" style="grid-area: span 2 / span 2">
+            <h2>Market News</h2>
+            <canvas id="marketNewsChart"></canvas>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/e267099c50.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

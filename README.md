@@ -8,7 +8,7 @@ Visualização de Preços em Tempo Real: Atualização dos preços das criptomoe
 Gráficos Interativos: Exibição de gráficos interativos para visualizar as tendências de preços.<br>
 Pesquisa de Criptomoedas: Capacidade de buscar informações sobre criptomoedas específicas.<br>
 Listagem de Favoritos: Possibilidade de adicionar criptomoedas à lista de favoritos para monitoramento fácil.<br>
-Notificações de Alteração de Preço: Alertas personalizados para mudanças significativas nos preços das criptomoedas.<br>
+
 
 Tecnologias Utilizadas
 
